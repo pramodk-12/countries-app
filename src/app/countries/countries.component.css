@@ -1,0 +1,205 @@
+
+@font-face {
+    font-family: 'NunitoSans' ;
+    src : url('src/assets/fonts/NunitoSans-Regular.ttf');
+    font-weight: 600;
+}
+
+
+
+/* Typography */
+h3,h4,h5,h6 {
+    margin-bottom: 0.25rem!important;
+}
+
+.bgcolor-div {
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+}
+
+/* Navbar */
+
+.my-navbar {
+    box-shadow: 0px 1px 5px rgb(0, 0, 0,0.5);
+    margin-bottom: 1rem;
+    background-color: hsl(209, 23%, 22%);
+}
+
+.home-text {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.75em 0;
+    cursor: pointer;
+    margin: 0!important;
+}
+
+/* Search Box */
+
+.input-box-1 {
+    margin-top: 2rem;
+    position: relative;
+    max-width: 300px;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0,0.5);
+}
+
+.input-box-1 i {
+    position: absolute;
+}
+
+.icon {
+    padding: 1em;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.sizing-input {
+    border: none;
+    background-color: hsl(209, 23%, 22%);
+    padding: 1.5rem 2.75rem!important;
+    border-radius: 0!important;
+    font-size: 0.75rem!important;
+}
+
+
+.example-option-img {
+    vertical-align: middle;
+    margin-right: 8px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.search-content {
+    background-color: whitesmoke;
+    color: black;
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+
+.search-dropdown {
+    width: 300px!important;
+    position: relative;
+    display: block;
+    padding: 1em;
+    border-bottom: 1px solid rgb(0, 0, 0,0.2);
+} 
+
+.search-dropdown:hover {
+    background-color: rgb(0, 0, 0,0.5)!important;
+    color: white!important;
+    cursor: pointer;
+}
+
+/* Maxwidth container */
+
+.maxwidth-div {
+    margin: 0 auto;
+}
+
+/* Card transitions */
+
+.carddiv {
+    margin-top: 1rem ;
+}
+
+.my-card {
+    font-family: 'NunitoSans'!important ;
+    padding: 0.25em;
+    margin: 1em 0;
+    
+}
+
+.card-content {
+    background-color: hsl(209, 23%, 22%);
+    margin: 0.5em ;
+    transition: 0.3s;
+    border-radius: 0!important;
+}
+
+.card-content:hover {
+    margin: 0;
+    box-shadow: 0px 0px 5px black;
+    transition: 0.3s;
+}
+
+/* Card Image */
+
+.img-card {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Card Content */
+
+.mycard-title {
+    padding: 0.5em 0 ;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+
+/* List items inside card content */
+
+/* .list-items:hover {
+    text-decoration: underline;
+}
+
+.list-items:after {
+    content: " ,";
+}
+
+.list-items:last-child:after {
+    content: "";
+} */
+
+.list-button {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0 1em!important;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0,0.5);
+}
+
+.list-button:hover {
+    background-color: whitesmoke!important;
+    color: black!important;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .maxwidth-div {
+        max-width: 400px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .maxwidth-div {
+        max-width: 550px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .maxwidth-div {
+        max-width: 760px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .maxwidth-div {
+        max-width: 950px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .maxwidth-div {
+        max-width: 1150px;
+    }
+}

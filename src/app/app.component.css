@@ -1,0 +1,15 @@
+.container-fluid {
+    padding: 0em!important;
+}
+
+.example-option-img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.search-dropdown {
+    position: relative;
+    display: block;
+    margin: 0.5em 0em;
+ 
+}  
