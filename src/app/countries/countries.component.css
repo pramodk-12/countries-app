@@ -47,6 +47,7 @@ h3,h4,h5,h6 {
 }
 
 .icon {
+    /* padding: 1em; */
     padding: 1em;
     top: 50%;
     transform: translate(0,-50%);
