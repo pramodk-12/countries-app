@@ -1,75 +1,75 @@
-.row {
-    margin: 0!important;
+.my-container {
+    background-color: hsl(207, 26%, 17%);
+    margin: 0 auto;
 }
-
 
 .maincontent-div {
-    background-image: url('src/assets/images/new-image2.jpg')!important;
-    background-size: cover;
-    background-repeat: repeat-y;
+    display: flex;
+    justify-content: center;
 }
 
-.my-container {
-    margin: 0 auto;
-    text-align: center;
+.regions-div {
+    display: flex;
+    flex-direction: column;
 }
 
-.bottom-text {
-    position: relative;
-    z-index: 10;
-    color: white;
-    background-color: rgb(0, 0, 0,0.5);
-    height: 40px;
-    transition: 0.5s ;
-    
+.region-box {
+    margin: 1em;
 }
 
-.my-card {
-    background-color: white;
-    padding: 0.5em!important;
-    box-shadow: inset 0 0 5px #000000  ;
-    margin: 1.5em 0em;
-}
-
-
-.my-card:hover .bottom-text {
-    transition: 0.7s ;
-    cursor: pointer;
-
-}
-
-.text-content {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%,0);
-    transition: 0.4s;
-}
-
-.my-card:hover .text-content {
-    top: 50%;
-    transform: translate(-50%,-50%);
+.region-image {
+    height: 220px;
+    width: 220px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    object-fit: contain;
     transition: 0.5s;
 }
+
+.region-name {
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+
+.region-image:hover {
+    padding: 0;
+    /* height: 220px;
+    width: 220px;
+    object-fit: contain; */
+    transition: 0.5s;
+}
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
     .my-container {
         max-width: 400px;
     }
 
-    .my-card:hover .bottom-text {
-        height: 215px;
-    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .my-container {
-        max-width: 500px;
+        max-width: 700px;
     }
 
-    .my-card:hover .bottom-text {
-        height: 271px;
+    .regions-div {
+        flex-direction: row;
+    }
+
+    .maincontent-div {
+        height: 100vh;
+        align-items: center;
     }
 
 }
@@ -77,27 +77,9 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .my-container {
-        max-width: 650px;
+        max-width: 800px;
     }
-
-    .maincontent-div {
-        height: 100vh;
-        background-image: url('src/assets/images/bg-image.jpg');
-        background-repeat: none;
-    }
-
-    .my-card:hover .bottom-text {
-        height: 143px;
-    }
-
-    .my-container {
-        height: 100vh;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -106,9 +88,7 @@
         max-width: 950px;
     }
 
-    .my-card:hover .bottom-text {
-        height: 124px;
-    }
+    
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -117,7 +97,5 @@
         max-width: 1150px;
     }
 
-    .my-card:hover .bottom-text {
-        height: 152px;
-    }
+    
 }

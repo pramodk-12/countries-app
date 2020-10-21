@@ -37,7 +37,7 @@
     <!-- Card Content -->
 
 
-    <div class="carddiv"> 
+    <div class="carddiv" *ngIf = "countries$ | async as countries" > 
       <div class="row">
         <div class=" col-12 col-sm-6 col-md-4 col-xl-3 my-card " *ngFor = 'let country of countries' >
           <div [routerLink] = "['/country',country.name]" class="card-content card">
@@ -49,18 +49,11 @@
               <h5><strong>Population:</strong> {{country.population}} </h5>
               <h5><strong>Region:</strong> {{country.region}} </h5>
               <h5><strong>Capital:</strong> {{country.capital}} </h5>
-              <!-- <div class="d-flex flex-wrap" >
-                <h5><strong>Timezones:</strong> </h5>
-                <button class="btn list-button"  *ngFor = 'let time of country.timezones'  > {{time}} </button>
-              </div> -->
+              
               <div class="d-flex flex-wrap  " >
                 <h5> <strong>Languages:</strong> </h5>
-                <button class="btn list-button"  [routerLink]= "['/countries','lang', lang.iso639_1 ]" *ngFor = 'let lang of country.languages'  > {{lang.name}} </button>
+                <button class="btn list-button"  [routerLink]= "['/countries','lang', lang.name ]" *ngFor = 'let lang of country.languages'  > {{lang.name}} </button>
               </div>
-              <!-- <div class="d-flex flex-wrap  " >
-                <h5> <strong>Currencies:</strong> </h5>
-                <button class="btn list-button"  [routerLink]= "['/countries','currency', currency.code | lowercase ]" *ngFor = 'let currency of country.currencies'  > {{currency.name}} </button>
-            </div> -->
             </div>
         </div> 
         </div>
@@ -68,21 +61,6 @@
     </div>
     <div>
 
-      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" [routerLink] = "['/regions']"  >Home</a>
-        <form class="form-inline my-2 my-lg-0">
-          <input [(ngModel)] = 'listFilter' name="listfilter" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <div class="search-content" >
-            <div class="d-flex flex-column" >
-              <div class="search-dropdown" *ngFor="let state of countriesSearch" [value]="state.name">
-                <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
-                <span>{{state.name}}</span> 
-                <hr>
-              </div>
-            </div>
-          </div>
-        </form>   
-      </nav> -->
     </div>
     
   </div>

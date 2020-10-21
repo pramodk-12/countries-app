@@ -56,6 +56,7 @@ h3,h4,h5,h6 {
 .sizing-input {
     border: none;
     background-color: hsl(209, 23%, 22%);
+    color: white;
     padding: 1.5rem 2.75rem!important;
     border-radius: 0!important;
     font-size: 0.75rem!important;
@@ -140,19 +141,6 @@ h3,h4,h5,h6 {
 
 
 
-/* List items inside card content */
-
-/* .list-items:hover {
-    text-decoration: underline;
-}
-
-.list-items:after {
-    content: " ,";
-}
-
-.list-items:last-child:after {
-    content: "";
-} */
 
 .list-button {
     background-color: hsl(209, 23%, 22%);

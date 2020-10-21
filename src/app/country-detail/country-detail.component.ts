@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CountryService } from '../service/countries.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { map, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-country-detail',
   templateUrl: './country-detail.component.html',
   styleUrls: ['./country-detail.component.css']
 })
-export class CountryDetailComponent implements OnInit {
+export class CountryDetailComponent  {
   country: any;
   errorMessage: string;
   countryCode = {};
@@ -16,18 +17,10 @@ export class CountryDetailComponent implements OnInit {
                private route: ActivatedRoute ,
                private location: Location ) { }
 
-  ngOnInit(): void {
-      const id  = this.route.snapshot.paramMap.get('countryid');
-      this.country = this.countryService.getCountry(id).subscribe({ 
-        next: data =>{ 
-        this.country  = data[0];
-        },
-        error: err => this.errorMessage = err
-      });
-      this.countryCode = this.countryService.getAlphacode();
-      console.log(this.countryCode);
-      
-  }
+  country$ = this.route.paramMap.pipe(
+    map(paramMap => paramMap.get('countryid')),
+    switchMap( (country:string) => this.countryService.getCountry(country)));
+  
 
   onBack() {
     this.location.back();

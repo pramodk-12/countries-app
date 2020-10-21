@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CountryService } from  '../service/countries.service' ;
 import { ActivatedRoute } from '@angular/router';
 import { ICountries } from './countries';
+import { map, switchMap, tap } from 'rxjs/operators';
 
 export interface State {
   name: string;
@@ -13,13 +14,12 @@ export interface State {
   templateUrl: './countries.component.html',
   styleUrls: ['./countries.component.css']
 })
-export class CountriesComponent implements OnInit {
-  countries: ICountries[] = [];
+export class CountriesComponent  {
   errorMessage: string;
   _listFilter: string;
   countriesSearch: any ;
 
-  get listFilter(): string {
+get listFilter(): string {
     return this._listFilter;
 }
 
@@ -31,42 +31,21 @@ set listFilter(value: string){
   constructor(private countryService: CountryService,
               private route: ActivatedRoute  ) { }
 
-  ngOnInit(): void {
 
-    this.route.paramMap.subscribe(
-      params => {
-        const id = params.get('id');
-        const type = params.get('typeid');
-        if( type == 'region') {
-          this.countryService.getRegion(id).subscribe({ 
-            next: data =>{ 
-            this.countries  = data;
-            },
-            error: err => this.errorMessage = err
-          });
-        } 
-        
-        if(type == 'currency') {
-          this.countryService.getCurrency(id).subscribe({
-            next: data =>{ 
-              this.countries  = data;
-              },
-              error: err => this.errorMessage = err
-          });
-        }
 
-        if(type == 'lang') {
-          this.countryService.getLanguage(id).subscribe({
-            next: data =>{ 
-              this.countries  = data;
-              },
-              error: err => this.errorMessage = err
-          });
-        }
-      }
-    ); 
-  }
+countries$ = this.route.paramMap.pipe(
+  map(paramMap => {
+    const params1 =  {
+      id : paramMap.get('id'),
+      typeid : paramMap.get('typeid')
+    }
+    return params1;
+  }),
+  switchMap(countries => this.countryService.getCountries(countries.id,countries.typeid) )
+)
 
+  
+  
 
   performFilter(filterBy: string) {
     if(filterBy.length > 1) {
