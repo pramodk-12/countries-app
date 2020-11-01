@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CountryService } from './service/countries.service';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
 
 export interface State {
   name: string;
@@ -17,21 +13,13 @@ export interface State {
 })
 export class AppComponent implements OnInit {
   title = 'project-countries';
-  errorMessage: string;
-  country: any;
-  countries:any;
-  _listFilter: string;
 
-  constructor( private countryService: CountryService ) {
-    
-  }
+  constructor( ) {}
 
   ngOnInit(): void {
 
   }
     
-
-  
     
 }
 

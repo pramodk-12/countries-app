@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, combineLatest, EMPTY } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { ICountries } from '../../shared/countries';
-import { CountryService } from '../../../service/countries.service';
+import { CountryService } from '../../services/countries.service';
 
 @Component({
   selector: 'app-countries-container',
