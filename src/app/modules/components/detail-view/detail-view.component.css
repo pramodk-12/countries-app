@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Nunito' ;
+    src : url('src/assets/fonts/NunitoSans-Regular.ttf')
+}
+
+/* Typography */
+h3,h4,h5,h6 {
+    margin-bottom: 0.5rem!important;
+}
+
+/* background */
+.bgcolor-div {
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+}
+
+/* Text  */
+.card-title {
+    font-family: 'Nunito-Sans-Bold' ;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-family: 'Nunito-Sans-Bold' ;
+    font-size: 0.85rem;
+}
+
+.card-regular-text {
+    font-family: 'Nunito-Sans-semiBold' ;
+    font-size: 0.85rem;
+}
+
+
+/* Maxwidth container */
+
+.maxwidth-div {
+    margin: 0 auto;
+}
+
+.back-button {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25em 2em!important;
+    margin: 3em 0 3.25em 0!important;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0,0.5);
+}
+
+.back-button:hover {
+    background-color: whitesmoke!important;
+    color: black!important;
+}
+
+
+
+
+
+.country-img {
+    width: 70%!important;
+    margin-bottom: 1em;
+}
+
+.list-items:hover {
+    text-decoration: underline;
+}
+
+.list-items:after {
+    content: " ,";
+}
+
+.list-items:last-child:after {
+    content: "";
+}
+
+/* border */
+.border-button {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0 1em!important;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0,0.5);
+}
+
+.border-button:hover {
+    background-color: whitesmoke!important;
+    color: black!important;
+}
+
+
+.borders-text {
+    margin-bottom: 0!important;
+}
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+
+    .country-img {
+        width: 100%!important;
+    }
+
+    .content-div {
+        height: 75vh;
+    }
+}
+
+
+
+
+.loading-bar {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rotation-animation {
+    animation: div-rotate 0.7s infinite steps(8);
+    transform: translateZ(0);
+    transform-origin: 50% 50%;
+}
+
+@keyframes div-rotate {
+      0% { transform: rotate(  0deg) scale(0.1);}
+    100% { transform: rotate(360deg) scale(0.1);}
+}
+
+#first {
+  font-size: 400px;
+  margin: -175px;
+}

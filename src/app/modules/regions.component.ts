@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CountryService } from '../service/countries.service';
 
 @Component({
   selector: 'app-regions',
@@ -7,11 +6,10 @@ import { CountryService } from '../service/countries.service';
   styleUrls: ['./regions.component.css']
 })
 export class RegionsComponent implements OnInit {
-  typesOfRegions = ['africa','americas','asia','europe','oceania']
-  constructor(private countryService: CountryService) { }
+
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  
 }

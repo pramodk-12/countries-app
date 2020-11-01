@@ -1,0 +1,28 @@
+.input-box-1 {
+    margin: 2em 0em;
+    position: relative;
+    max-width: 300px;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0,0.5);
+}
+
+.input-box-1 i {
+    color: white;
+    position: absolute;
+}
+
+.icon {
+    /* padding: 1em; */
+    padding: 1em;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.custom-input {
+    width: 100%;
+    border: none;
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    font-size: 0.75rem;
+}

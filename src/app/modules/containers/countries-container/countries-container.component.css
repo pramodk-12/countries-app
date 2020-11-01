@@ -1,0 +1,58 @@
+@import "../../../../assets/variables.scss";
+
+.maxwidth-div {
+    margin: 0 auto;
+}
+
+.my-navbar {
+    box-shadow: 0px 1px 5px rgb(0, 0, 0,0.5);
+    margin-bottom: 1rem;
+    background-color: hsl(209, 23%, 22%);
+}
+
+.home-text {
+    font-family: 'Nunito-Sans-Bold';
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.75em 0;
+    cursor: pointer;
+    color: white;
+    margin: 0!important;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .maxwidth-div {
+        max-width: 500px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .maxwidth-div {
+        max-width: 550px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .maxwidth-div {
+        max-width: 720px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .maxwidth-div {
+        max-width: 950px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .maxwidth-div {
+        max-width: 1150px;
+    }
+}

@@ -1,0 +1,10 @@
+<div>
+    <div class="my-navbar" >
+        <div class="maxwidth-div" >
+          <h3 [routerLink] = "['/app']" class="home-text"> Home </h3>
+        </div> 
+    </div>
+    <div class="detail-box maxwidth-div" >
+        <app-detail-view [country$] = "country$" (routeWord) = "routeBack($event)" ></app-detail-view>
+    </div>
+</div>

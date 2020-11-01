@@ -1,0 +1,190 @@
+@import "../../../../assets/variables.scss";
+
+
+
+/* Typography */
+h3,h4,h5,h6 {
+    margin-bottom: 0.25rem!important;
+}
+
+.bgcolor-div {
+    color: white;
+}
+
+/* Navbar */
+
+.my-navbar {
+    box-shadow: 0px 1px 5px rgb(0, 0, 0,0.5);
+    margin-bottom: 1rem;
+    background-color: hsl(209, 23%, 22%);
+}
+
+.home-text {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.75em 0;
+    cursor: pointer;
+    margin: 0!important;
+}
+
+/* Search Box */
+
+.input-box-1 {
+    margin-top: 2rem;
+    position: relative;
+    max-width: 300px;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0,0.5);
+}
+
+.input-box-1 i {
+    position: absolute;
+}
+
+.icon {
+    /* padding: 1em; */
+    padding: 1em;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.sizing-input {
+    border: none;
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    padding: 1.5rem 2.75rem!important;
+    border-radius: 0!important;
+    font-size: 0.75rem!important;
+}
+
+
+.example-option-img {
+    vertical-align: middle;
+    margin-right: 8px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.search-content {
+    background-color: whitesmoke;
+    color: black;
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+
+.search-dropdown {
+    width: 300px!important;
+    position: relative;
+    display: block;
+    padding: 1em;
+    border-bottom: 1px solid rgb(0, 0, 0,0.2);
+} 
+
+.search-dropdown:hover {
+    background-color: rgb(0, 0, 0,0.5)!important;
+    color: white!important;
+    cursor: pointer;
+}
+
+/* Card transitions */
+
+.carddiv {
+    margin-top: 1em ;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.my-card5 {
+    font-family: 'Nunito-Sans-SemiBold'!important ;
+    background-color: hsl(209, 23%, 22%);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.my-card5:hover {
+    background-color:  hsl(210, 49%, 15%) ;
+    box-shadow: 0px 0px 5px black;
+    transition: 0.3s;
+}
+
+.my-card5:hover > .img-content > .img-card {
+    scale: 1.1;
+    transition: 0.3s;
+}
+
+
+
+/* Card Image */
+
+.img-card {
+    transition: 0.3s;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Card Content */
+
+.card-text {
+    font-family: 'Nunito-Sans-Bold' ;
+}
+
+.mycard-title {
+    font-family: 'Nunito-Sans-Bold' ;
+    padding: 0.5em 0 ;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+
+
+.list-button {
+    font-family: 'Nunito-Sans-Bold' ;
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0 1em;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0,0.5);
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.list-button:hover {
+    background-color: whitesmoke;
+    color: black;
+    transition: 0.3s;
+}
+
+/* Loading bar */
+
+.loading-bar {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rotation-animation {
+    animation: div-rotate 0.7s infinite steps(8);
+    transform: translateZ(0);
+    transform-origin: 50% 50%;
+}
+
+@keyframes div-rotate {
+      0% { transform: rotate(  0deg) scale(0.1);}
+    100% { transform: rotate(360deg) scale(0.1);}
+}
+
+#first {
+  font-size: 400px;
+  margin: -175px;
+}
+

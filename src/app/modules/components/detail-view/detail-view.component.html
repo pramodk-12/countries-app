@@ -1,0 +1,48 @@
+<div class="bgcolor-div" >
+   
+        <div>
+            <button (click) = 'backRoute()' class=" btn back-button card-text"> <i class="fa fa-arrow-left pr-2 "></i>  Back</button>
+        </div>
+        <div class="loading-bar" *ngIf = "!(country$ | async)" >
+            <div  >
+                <p class="card-text" >Loading..</p>
+                <i id="first" class="fa fa-spinner rotation-animation"></i>
+              </div>
+        </div>
+        <div class="content-div" *ngIf = "country$ | async as country"  >
+            <div class="row justify-content-md-between  ">
+                <div class="col-12 col-md-5 ">
+                    <img [src] = "country.flag" class="img-fluid country-img"  alt="Flag">
+                </div>
+                <div class="col-12 col-md-6 d-flex align-self-center " >
+                    <div class="w-100" >
+                        <h2 class="card-title" > {{country.name}} </h2>
+                        <div class="row justify-content-lg-between  " >
+                            <div class="col-12 col-lg-6 mb-2"> 
+                                <h5 class="card-regular-text" > <span class="card-text" >Native Name:</span> {{country.nativeName}}  </h5>
+                                <h5 class="card-regular-text" > <span class="card-text" >Population:</span> {{country.population}}  </h5>
+                                <h5 class="card-regular-text" > <span class="card-text" >Region: </span> {{country.region}}  </h5>
+                                <h5 class="card-regular-text" > <span class="card-text" >Sub Region: </span> {{country.subregion}} </h5>
+                                <h5 class="card-regular-text" > <span class="card-text" >Capital: </span> {{country.capital}} </h5>
+                            </div>
+                            <div class="col-12 col-lg-6" >
+                                <div class="d-flex flex-wrap" >
+                                    <h5 class="card-text" >Top Level Domain: </h5>
+                                    <h5 class="list-items card-regular-text" style="text-decoration: none;" *ngFor = 'let tld of country.topLevelDomain'  > {{tld}} </h5>
+                                </div>
+                                <div class="d-flex flex-wrap  " >
+                                    <h5 class="card-text" > Currencies: </h5>
+                                    <h5 class="list-items card-regular-text"  [routerLink]= "['/countries','currency', currency.code | lowercase ]" *ngFor = 'let currency of country.currencies'  > {{currency.name}} </h5>
+                                </div>
+                                <div class="d-flex flex-wrap  " >
+                                    <h5 class="card-text" > Languages: </h5>
+                                    <h5 class="list-items card-regular-text"  [routerLink]= "['/countries','lang', lang.iso639_1 ]" *ngFor = 'let lang of country.languages'  > {{lang.name}} </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+</div>

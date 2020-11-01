@@ -1,0 +1,17 @@
+<div>
+    <div class="my-navbar" >
+        <div class="maxwidth-div" >
+          <h3 [routerLink] = "['/app']" class="home-text"> Home </h3>
+        </div> 
+    </div>
+    <div class="search-box maxwidth-div" >
+        <app-search (searchWord) = "searchParent($event)" ></app-search>
+    </div>
+    <div class="maxwidth-div" >
+        <app-countries-view [countries$] = "countriesFilter$" ></app-countries-view>
+    </div>
+</div>
+
+
+
+
