@@ -13,6 +13,8 @@ import { CountryService } from '../../services/countries.service';
 export class CountriesContainerComponent implements OnInit {
 
   errorMessage:any;
+  type: string;
+  typeid: string;
 
   private searchSubject =  new BehaviorSubject<string>('');
   searchAction$ = this.searchSubject.asObservable();
@@ -21,7 +23,9 @@ export class CountriesContainerComponent implements OnInit {
               private route: ActivatedRoute  ) { }
 
   
-              
+  
+  
+
 
   countries$ = this.route.paramMap.pipe(
       map(paramMap => {
@@ -49,6 +53,7 @@ export class CountriesContainerComponent implements OnInit {
   })) ;
 
   ngOnInit(): void {
+    
   }
 
 
