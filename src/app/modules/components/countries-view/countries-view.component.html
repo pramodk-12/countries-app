@@ -13,7 +13,7 @@
       <div class="carddiv" *ngIf = "countries$ | async as countries" >
         <div class="grid-box" >
           <div *ngFor = 'let country of countries' >
-            <div class="my-card5 h-100" [routerLink] = "['/app/country', country.name]"  >
+            <div class="my-card5 h-100" [@header] [routerLink] = "['/app/country', country.name]"  >
               <div class="img-content" >
                 <img [src]= 'country.flag'  class="img-card" alt="...">
               </div>
@@ -22,7 +22,7 @@
                 <h5 class="card-text" ><strong>Population:</strong> {{country.population}} </h5>
                 <h5 class="card-text" ><strong>Region:</strong> {{country.region}} </h5>
                 <h5 class="card-text" ><strong>Capital:</strong> {{country.capital}} </h5>
-                
+
                 <div class="d-flex flex-wrap  " >
                   <h5> <strong>Languages:</strong> </h5>
                   <button class="list-button" (click)="$event.stopPropagation()" [routerLink]= "['/app/countries','lang', lang.name ]" *ngFor = 'let lang of country.languages'  > {{lang.name}} </button>
@@ -33,13 +33,12 @@
                 </div>
               </div>
             </div>
-          </div>        
-      </div>   
+          </div>
+      </div>
     </div>
   </div>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
